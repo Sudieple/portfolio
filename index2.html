@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sứ Điệp Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+ 
+
+
+
+  </head>
+	  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">Sứ Điệp's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Team</a></li>   
+			  <li class="nav-item"><a class="nav-link" href="#contact">Feedback</a></li> 
+			  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="hero" class="d-flex align-items-center">
+      <div class="container text-center">
+        <h1>Hello, I am Lê Sứ Điệp</h1>
+        <p class="lead">A Creative Designer</p>
+        <a href="#portfolio" class="btn btn-primary mt-3">View My Work</a>
+      </div>
+    </header>
+
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="image/490987731_1205292141095092_1274101644890640271_n.jpg" class="img-fluid rounded" alt="About Me">
+          </div>
+          <div class="col-md-6">
+            <h2>About Me</h2>
+            <p>I am a passionate creative who loves design and storytelling. Every project I take on is an opportunity to create impactful visual experiences crafted with heart and soul.
+
+Currently, I am a student at Arena Multimedia (Nguyễn Đình Chiểu Campus, District 3), where I am sharpening my skills and pushing the boundaries of my creativity every day.
+
+I believe that great design is not just about aesthetics — it's about telling stories that connect, inspire, and move people. Through colors, shapes, and ideas, I seek to create works that leave a lasting impression.
+
+Driven by curiosity and fueled by passion, I am constantly learning, experimenting, and growing — ready to bring bold, fresh ideas to life in this ever-evolving creative world..</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	  <section class="skills-section">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skill-container">
+    <div class="skill">
+      <p>Photoshop</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 85%;">85%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Web Design</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 60%;">60%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Illustration</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 70%;">70%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Indesign</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 75%;">75%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <section id="portfolio" class="project-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-description">Some products and projects that I have recently completed.</p>
+    
+   <!-- Filter Menu -->
+<div class="filter-menu my-4 text-center">
+  
+  <button class="filter-btn" data-filter="art">Art</button>
+  <button class="filter-btn" data-filter="photo">Photo Manipulation</button>
+  
+</div>
+
+<!-- Project Grid -->
+<div class="row" id="project-grid">
+  <div class="col-md-4 mb-4 project-item" data-category="art">
+    <img src="image/Lê Sứ Điệp (1).jpg" class="img-fluid rounded project-img" alt="Art Project">
+  </div>
+  <div class="col-md-4 mb-4 project-item" data-category="photo">
+    <img src="image/Noah.jpeg" class="img-fluid rounded project-img" alt="Photo Manipulation">
+  </div>
+  
+  <!-- Thêm hình khác với data-category tương ứng -->
+</div>
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      // Xóa class active ở tất cả nút
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Lọc ảnh
+      projectItems.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+<section id="team" class="py-5" style="background-color: #fef4f9;">
+  <div class="container text-center">
+    <h2 class="mb-4" style="font-weight: 700; font-size: 2.5rem; color: #716DF2;">🌸 Our Lovely Team 🌸</h2>
+    <p class="mb-5" style="color: #777;">Creative souls working together to make magic happen ✨</p>
+    
+    <div class="row">
+      <!-- Member 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="team-card p-4 rounded shadow">
+          <img src="image/PT.jpeg" alt="Member 1" class="img-fluid rounded-circle mb-3 team-img">
+          <h5 class="fw-bold" style="color: #716DF2;">Phương Trâm</h5>
+          <p class="text-muted">Graphic Designer</p>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="team-card p-4 rounded shadow">
+          <img src="image/SĐ.jpg" alt="Member 2" class="img-fluid rounded-circle mb-3 team-img">
+          <h5 class="fw-bold" style="color: #716DF2;">Sứ Điệp</h5>
+          <p class="text-muted">Graphic Designer</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="team-card p-4 rounded shadow">
+          <img src="image/MP.jpg" alt="Member 3" class="img-fluid rounded-circle mb-3 team-img">
+          <h5 class="fw-bold" style="color: #716DF2;">Mai Phương</h5>
+          <p class="text-muted">Graphic Designer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section id="testimonial" class="py-5 bg-gradient-primary" style="height:700px">
+	<div class="container pt-5">
+		<div class="row text-center my-4">
+	  <div class="col-12 col-lg-6 mx-auto">
+		  <h1 class="text-primary">Customer says</h1>
+		
+		  </div>
+  </div>
+	     <div class="row">
+        <div class="col-md-12">
+          <div id="carouselExampleIndicators" class="carousel slide py-4 " data-ride="carousel"  >
+            <ol class="carousel-indicators" style="margin-top: 15px;">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="color:aqua"> </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+    
+            </ol>
+            <div class="carousel-inner ">
+              <div class="carousel-item active"> 
+			  <div class="row">
+        <div class="col-md-6 p-3">
+          <div class="card">
+            <div class="card-body p-4">
+              <p class="mb-3">Sản phẩm cực kỳ dễ thương, giao nhanh, đóng gói cẩn thận</p>
+              <div class="row">
+                <div class="col-lg-2 col-3"> <img class="img-fluid d-block rounded-circle" src="image/freepik__adjust__41057.png"> </div>
+                <div class="col-lg-10 col-9 d-flex align-items-center">
+                  <p class="my-2"><i>Customer</i> Mi Mi </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto col-md-6 p-3">
+          <div class="card">
+            <div class="card-body p-4">
+              <p class="mb-3">Dịch vụ chăm sóc khách hàng rất tuyệt vời. Rất hài lòng!</p>
+              <div class="row">
+                 <div class="col-lg-2 col-3"> <img class="img-fluid d-block rounded-circle" src="image/freepik__adjust__41058.png"> </div>
+                <div class="col-lg-10 col-9 d-flex align-items-center">
+                   <p class="my-2"><i>Customer</i> Huynh Huynh </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              </div>
+              <div class="carousel-item">
+				    <div class="row">
+        <div class="col-md-6 p-3">
+          <div class="card">
+            <div class="card-body p-4">
+              <p class="mb-3">Đóng gói siêu xinh, chất lượng hơn mong đợi nhiều!</p>
+              <div class="row">
+                <div class="col-lg-2 col-3"> <img class="img-fluid d-block rounded-circle" src="image/freepik__adjust__41058.png"> </div>
+                <div class="col-lg-10 col-9 d-flex align-items-center">
+                   <p class="my-2"><i>Customer</i> Bo Bo </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto col-md-6 p-3">
+          <div class="card">
+            <div class="card-body p-4">
+              <p class="mb-3"> "Thiết kế bao bì quá đáng yêu, lần sau sẽ ủng hộ tiếp"</p>
+              <div class="row">
+                <div class="col-lg-2 col-3"> <img class="img-fluid d-block rounded-circle" src="image/freepik__adjust__41057.png"> </div>
+                <div class="col-lg-10 col-9 d-flex align-items-center">
+                   <p class="my-2"><i>Customer</i> Mon Mon </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+				  
+   </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	</section>
+    <section id="contact" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2>Contact Me</h2>
+        <p>Email: susudiep@gmail.com | Phone: 0123-456-789</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-facebook mr-3"></i></a>
+          <a href="#"><i class="fa fa-instagram mr-3"></i></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-3 bg-dark text-white">
+      &copy; 2025 Sứ Điệp. All rights reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	  <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" style="display:none;">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+<script>
+  const projectImages = document.querySelectorAll('.project-img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  projectImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+	  
+
